@@ -1,0 +1,62 @@
+<div class="card-box">
+    <form [formGroup]="studentForm" (ngSubmit)="SaveStudent()">
+        <div class="row" style="text-align: center;display: block;">
+            <h2>Edit Student</h2>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <label for="fname"><b>First Name:</b></label>
+                <input type="text" id="fname" class="form-control" formControlName="firstName" autocomplete="off">
+                <span *ngIf="firstName && firstName.invalid && firstName.touched" class="error">Please enter first name</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <label for="lname"><b>Last Name:</b></label>
+                <input type="text" id="lname" class="form-control" formControlName="lastName" autocomplete="off">
+                <span *ngIf="lastName && lastName.invalid && lastName.touched" class="error">Please enter last name</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <label for="email"><b>Email:</b></label>
+                <input type="text" id="email" class="form-control" formControlName="email" autocomplete="off">
+                <span *ngIf="email && email.invalid && email.touched" class="error">Please enter valid email</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <label for="phone"><b>Mobile:</b></label>
+                <input type="text" id="phone" class="form-control" formControlName="mobile" autocomplete="off">
+                <span *ngIf="mobile && mobile.invalid && mobile.touched" class="error">Please enter your mobile number</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <label for="state"><b>State:</b></label>
+                <input type="text" id="state" class="form-control" formControlName="state" autocomplete="off">
+                <span *ngIf="state && state.invalid && state.touched" class="error">Please enter your state</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <label for="city"><b>City:</b></label>
+                <input type="text" id="city" class="form-control" formControlName="city" autocomplete="off">
+                <span *ngIf="city && city.invalid && city.touched" class="error">Please enter your city</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-2">
+                <br> 
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
